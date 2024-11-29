@@ -89,7 +89,7 @@ python inference_realesrgan_video.py -i upload/your_video.mp4 -n realesr-animevi
 --suffix: The suffix added to the output video file name.
 
 
-## Step 3: Visualize the Input and Enhanced Videos
+### Step 3: Visualize the Input and Enhanced Videos
 After processing, you can visualize the original and enhanced videos directly in the notebook:
 
 ```python
