@@ -86,8 +86,11 @@ python inference_realesrgan_video.py -i upload/your_video.mp4 -n realesr-animevi
 #### Arguments:
 
 -i, --input: Input video file path.
+
 -n, --model_name: The model name used for enhancement (e.g., realesr-animevideov3).
+
 -s, --outscale: The upscale factor (e.g., 2 for 2x enhancement).
+
 --suffix: The suffix added to the output video file name.
 
 
@@ -121,5 +124,7 @@ files.download('results/your_video_outx2.mp4')
 ## Configuration
 You can customize the following parameters:
 
+
 Model Name: Choose between different Real-ESRGAN models for different enhancement levels.
+
 Scale Factor: Adjust the scale factor for video enhancement (e.g., -s 2 for 2x upscaling).
