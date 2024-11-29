@@ -72,6 +72,7 @@ uploaded = files.upload()
 for filename in uploaded.keys():
     dst_path = os.path.join(upload_folder, filename)
     shutil.move(filename, dst_path)
+```
 
 
 ### Step 2: Video Inference (Enhancement)
@@ -80,6 +81,7 @@ Run the video inference script to enhance the uploaded video. You can adjust the
 
 ```python
 python inference_realesrgan_video.py -i upload/your_video.mp4 -n realesr-animevideov3 -s 2 --suffix outx2
+```
 
 #### Arguments:
 
@@ -101,17 +103,22 @@ def show_video(video_path, video_width = 600):
     video_url = f"data:video/mp4;base64,{b64encode(video_file).decode()}"
     return HTML(f"""<video width={video_width} controls><source src="{video_url}"></video>""")
 
-# Input video
+##### Input video
 show_video('upload/your_video.mp4', video_width=1200)
 
-# Enhanced video
+##### Enhanced video
 show_video('results/your_video_outx2.mp4', video_width=1200)
-Step 4: Download the Enhanced Video
+```
+
+
+### Step 4: Download the Enhanced Video
 Once the video is enhanced, you can download the output:
 
 ```python
 files.download('results/your_video_outx2.mp4')
-Configuration
+```
+
+## Configuration
 You can customize the following parameters:
 
 Model Name: Choose between different Real-ESRGAN models for different enhancement levels.
